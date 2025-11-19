@@ -34,6 +34,10 @@ export default function ShortenForm() {
         try {
             setLoading(true);
             const newAlias = await createNewAlias(url, alias);
+            if ("error" in newAlias) {
+                setError(newAlias.error);
+                return;
+            }
             setResult(alias)
         } catch (err: any) {
             setError(err.message ?? "Something went wrong.");

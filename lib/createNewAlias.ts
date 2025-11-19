@@ -13,11 +13,11 @@ export default async function createNewAlias(url: string, alias: string): Promis
     const collection = await getCollection(URL_COLLECTION);
     const existing = await collection.findOne({ alias: alias });
     if (existing) {
-        throw new Error("Invalid alias: This alias already exists.");
+        return { error: "This alias already exists." };
     }
     const res = await collection.insertOne({...a})
     if (!res.acknowledged) {
-        throw new Error("DB insert failed");
+        return { error: "Database insert failed." };
     }
     return { ...a, id: res.insertedId.toHexString() };
 }
