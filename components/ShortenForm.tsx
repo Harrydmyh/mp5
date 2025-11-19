@@ -61,7 +61,7 @@ export default function ShortenForm() {
             />
             <p className="font-semibold">Custom Alias:</p>
             <div className="flex items-center gap-5 max-w-2xl">
-                <span className="whitespace-nowrap">https://cs391-url-shortener.vercel.app/</span>
+                <span className="whitespace-nowrap">https://mp5-teal.vercel.app/</span>
 
                 <label htmlFor="shorten" className="sr-only">Search artworks</label>
 
@@ -89,13 +89,13 @@ export default function ShortenForm() {
                     <p>Your shortened URL:</p>
                     <div className="flex items-center gap-2">
                         <p className="text-blue-600 font-semibold break-all">
-                            https://cs391-url-shortener.vercel.app/{result}
+                            https://mp5-teal.vercel.app/{result}
                         </p>
 
                         <button
                             type="button"
                             onClick={() => {
-                                navigator.clipboard.writeText(`https://cs391-url-shortener.vercel.app/${result}`);
+                                navigator.clipboard.writeText(`https://mp5-teal.vercel.app/${result}`);
                                 setCopied(true);
                             }}
                             className="rounded hover:bg-gray-200 font-semibold text-black"

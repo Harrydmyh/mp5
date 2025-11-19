@@ -4,7 +4,7 @@ import getCollection from "@/db";
 import {URL_COLLECTION} from "@/db";
 
 export default async function createNewAlias(url: string, alias: string): Promise<Alias> {
-    console.log("Creating new post");
+    console.log("Creating new alias");
     const a = {
         url: url,
         alias: alias,
