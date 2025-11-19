@@ -58,7 +58,7 @@ export default function ShortenForm() {
                 id="url"
                 name="url"
                 className="border border-gray-300 rounded-md p-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                placeholder="Your URL"
+                placeholder="http://www.example.com/"
                 onChange={(e) => {
                     setUrl(e.target.value)
                 }}
